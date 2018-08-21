@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员控制台</title>
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="../plugin/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <!-- page specific plugin styles -->
+    <!-- text fonts -->
+    <link rel="stylesheet" href="../plugin/assets/css/google-fonts.css"/>
+    <!-- ace styles -->
+    <link rel="stylesheet" href="../plugin/assets/css/ace.min.css"/>
+    <link rel="stylesheet" href="../plugin/assets/css/ace-skins.min.css"/>
+    <link rel="stylesheet" href="../plugin/assets/css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="../plugin/assets/css/jquery.gritter.css" />
+    <link rel="stylesheet" href="../plugin/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../plugin/assets/css/chosen.css" />
+
+</head>
+<body class="no-skin">
+<div id="navbar" class="navbar navbar-default">
+    <div class="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
+            <span class="sr-only">Toggle sidebar</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand">
+                <small>
+                    <i class="fa fa-leaf"></i>
+                    管理员控制台
+                </small>
+            </a>
+        </div>
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="light-blue dropdown-modal">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <span class="user-info">
+                            <small>欢迎,</small>
+                            Admin
+                        </span>
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="#"> <i class="ace-icon fa fa-cog"></i>
+                                设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="ace-icon fa fa-user"></i>
+                                个人资料
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/logout.page"> <i class="ace-icon fa fa-power-off"></i>
+                                注销
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <div id="sidebar" class="sidebar responsive">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="nav nav-list">
+            <li class="active">
+                <a class="popstyle" href="#">
+                    <i class="menu-icon fa fa-tachometer"></i>
+                    <span class="menu-text"> 首页 </span>
+                </a>
+                <b class="arrow"></b>
+            </li>
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+                    <span class="menu-text"> 权限管理 </span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a class="popstyle" href="dept.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            用户管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a class="popstyle" href="role.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            角色管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a class="popstyle" href="acl.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            权限管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a class="popstyle" href="log.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            权限更新记录
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+                    <span class="menu-text"> 系统管理 </span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a class="popstyle" href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            全局配置管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /.nav-list -->
+
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left"
+               data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'collapsed')
+            } catch (e) {
+            }
+        </script>
+    </div>
+
+    <div class="main-content">
+        <iframe id="innerFrame" src="#" width="99%" style="min-height: 768px;"></iframe>
+    </div>
+    <!-- /.main-content -->
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse display">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+
+</div>
+<!-- /.main-container -->
+<!-- inline styles related to this page -->
+<!-- ace settings handler -->
+<script src="../plugin/assets/js/ace-extra.min.js"></script>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lte IE 8]>
+<script src="../plugin/js/html5shiv.min.js"></script>
+<script src="../plugin/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- basic scripts -->
+<script src="../plugin/js/jquery-1.9.1.min.js"></script>
+<script src="../plugin/assets/js/jquery-ui.min.js"></script>
+<script src="../plugin/assets/js/jquery.gritter.min.js"></script>
+<script src="../plugin/assets/js/chosen.jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/mustache.js/2.2.1/mustache.js"></script>
+<script src="../plugin/bootstrap3.3.5/js/bootstrap.min.js"></script>
+
+
+<!--[if !IE]> -->
+<script src="../plugin/assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="../plugin/assets/js/jquery-1.11.0.min.js"></script>
+<![endif]-->
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='../plugin/assets/js/jquery.min.js'>" + "<" + "/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='../plugin/assets/js/jquery1x.min.js'>" + "<" + "/script>");
+</script>
+<![endif]-->
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+
+<script src="../plugin/assets/js/jquery-ui.custom.min.js"></script>
+<script src="../plugin/assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="../plugin/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../plugin/assets/js/jquery.sparkline.min.js"></script>
+<script src="../plugin/assets/js/flot/jquery.flot.min.js"></script>
+<script src="../plugin/assets/js/flot/jquery.flot.pie.min.js"></script>
+<script src="../plugin/assets/js/flot/jquery.flot.resize.min.js"></script>
+
+<!-- ace scripts -->
+<script src="../plugin/assets/js/ace-elements.min.js"></script>
+<script src="../plugin/assets/js/ace.min.js"></script>
+<script src="../plugin/js/jquery.cookie.js"></script>
+<script src="../js/common.js"></script>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>
