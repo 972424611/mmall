@@ -1,6 +1,4 @@
 
-const token = $.cookie('token');
-
 if(token === undefined) {
     window.location.href = "signin.html";
 }

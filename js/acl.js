@@ -1,6 +1,3 @@
-const urlHead = $.cookie('urlHead');
-const token = $.cookie('token');
-
 
 var aclModuleList; // 存储树形权限模块列表
 var aclModuleMap = {}; // 存储map格式权限模块信息

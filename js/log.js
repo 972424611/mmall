@@ -1,5 +1,3 @@
-const urlHead = $.cookie('urlHead');
-const token = $.cookie('token');
 
 var logListTemplate = $('#logListTemplate').html();
 Mustache.parse(logListTemplate);

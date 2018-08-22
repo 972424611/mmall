@@ -1,5 +1,3 @@
-const urlHead = $.cookie('urlHead');
-const token = $.cookie('token');
 
 var roleMap = {};
 var lastRoleId = -1;

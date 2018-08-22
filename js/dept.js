@@ -1,5 +1,3 @@
-const urlHead = $.cookie('urlHead');
-const token = $.cookie('token');
 
 var deptList; // 存储树形部门列表
 var deptMap = {}; // 存储map格式的部门信息
