@@ -1,3 +1,6 @@
+if(token === undefined) {
+    window.location.href = "signin.html";
+}
 
 var deptList; // 存储树形部门列表
 var deptMap = {}; // 存储map格式的部门信息
