@@ -1,3 +1,4 @@
+$('#dropdown-top').dropdown();
 
 if(token === undefined) {
     window.location.href = "signin.html";
@@ -16,6 +17,4 @@ $(document).ready(function () {
             $("iframe").attr('src', $(this).attr("data"));
         }
     });
-
-
 });
